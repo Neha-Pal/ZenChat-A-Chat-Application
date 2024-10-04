@@ -1,24 +1,20 @@
-import User from "../models/user_model.js"
-import bcryptjs from "bcryptjs"
-import jwt from "jsonwebtoken"
+import User from "../models/user_model.js";
+import bcryptjs from "bcryptjs";
+import jwt from "jsonwebtoken";
+import { errorHandler } from "../utils/error.js";
 
-export const signup = async (req, res) => {
+export const signup = async (req, res, next) => {
     const { username, email, password, confirmPassword, gender } = req.body;
 
     try {
         let validUser = await User.findOne({ email });
 
         if (validUser) {
-            return res.status(400).json({
-                success: false,
-                message: "User already exists"
-            });
+            return next(errorHandler(400, "User already exists"));
         }
 
         if (password !== confirmPassword) {
-            return res.status(400).json({
-                error: "Passwords don't match"
-            });
+            return next(errorHandler(400, "Passwords don't match"));
         }
 
         const hashedPassword = bcryptjs.hashSync(password, 10);
@@ -40,26 +36,59 @@ export const signup = async (req, res) => {
 
         await newUser.save();
 
-        res.cookie("jwt_token", token,{httpOnly: true}).status(201).json({
+        res.cookie("jwt_token", token, { httpOnly: true }).status(201).json({
             _id: newUser._id,
             username: newUser.username,
             email: newUser.email,
             profilePic: newUser.profilePic,
-            token
+            token,
         });
 
     } catch (error) {
         console.error("Error during signup process:", error);
-        res.status(500).json({
-            error: "Internal server error",
-            message: error.message,  // Include error message for better debugging
-        });
+        return next(errorHandler(500, "Internal server error"));
     }
 };
 
-export const login = (req, res)=>{
+export const login = async(req, res, next) => {
+    // Implement login functionality here
+    try {
+        const {email, password} = req.body
+        const validUser = await User.findOne({email})
+
+        if (!validUser){
+            return next(errorHandler(404, "User not found"))
+        }
+
+        const validPassword = bcryptjs.compareSync(password, validUser.password)
+
+        if(!validPassword){
+            return next(errorHandler(401, "Wrong credentials"))
+        }
+
+        const token = jwt.sign({id:validUser._id}, process.env.JWT_SECRET)
+        res.cookie("jwt_token", token, { httpOnly: true }).status(201).json({
+            _id: validUser._id,
+            username: validUser.username,
+            email: validUser.email,
+            profilePic: validUser.profilePic,
+            token,
+        });
     
-}
-export const logout = (req, res)=>{
-    
-}
+    } catch (error) {
+        next(error)
+    }
+};
+
+export const logout = (req, res, next) => {
+    // Implement logout functionality here
+    try {
+      res.clearCookie("jwt_token")
+      
+      res.status(201).json({
+        message: "Logged Out"
+      })
+    } catch (error) {
+        next(error)
+    }
+};
