@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoutes from "./routes/auth.routes.js"
 import cookieParser from "cookie-parser"
+import messageRoutes from "./routes/message.routes.js"
 
 dotenv.config()
 
@@ -27,6 +28,7 @@ app.get("/",(req, res)=>{
 //import routes
 
 app.use("/api/auth", authRoutes)
+app.use("/api/messages", messageRoutes)
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on PORT ${PORT}`)
