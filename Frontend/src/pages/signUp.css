@@ -1,0 +1,89 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url('../assets/back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .signup-page {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .signup {
+    font-size: 28px;
+    color: #675858;
+    margin-bottom: 20px;
+  }
+  
+  h1 span {
+    color: rgb(35, 144, 35); /* Lime green for brand color */
+    font-size: 33px;
+  } form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    border-color: limegreen;
+    outline: none;
+  }
+  
+  
+  .button-signup {
+    background-color: limegreen;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .button-signup:hover {
+    background-color: #1c6e1c; /* Slightly darker lime green */
+    
+  }
+  
+  p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  p a {
+    color: limegreen;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  p a:hover {
+    color: #32cd32;
+  }
+  
