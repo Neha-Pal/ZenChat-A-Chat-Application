@@ -14,6 +14,10 @@ const Chat = () => {
 
   return (
     <div className="chat-container">
+      <div className='chat-header'>
+      <span>To: {name}</span>
+      
+      </div>
       <div className="chat-messages">
         {/* Example messages, dynamically render your messages and others */}
         <div className="message other">

@@ -7,7 +7,12 @@
   justify-content: flex-end;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3); /* Transparent background */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: slightly visible border for chat container */
+  border: 1px solid #ffffff33; /* Optional: slightly visible border for chat container */
+}
+
+.chat-header{
+  padding: 10px;
+  padding-left: 20px;
 }
 
 /* Scrollable area for messages */

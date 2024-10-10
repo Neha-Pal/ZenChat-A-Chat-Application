@@ -6,7 +6,7 @@ import user_img from '../assets/user_img.jpg';
 const Conversation = ({ name }) => {
   return (
     <div className="conversation">
-      <img src={user_img} alt="profile" />
+      <img src={user_img} alt="profile" className="conversation-image" />
       <div className="conversation-info">
         <div className="conversation-name">{name}</div>
         <div className="conversation-preview">Last message text will go here...</div>
