@@ -1,0 +1,39 @@
+/* Set up full height and width for the home page */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent horizontal scroll */
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Full height of the viewport */
+    width: 199vh; /* Full width of the viewport */
+    padding: 20px;
+    background-size: cover;
+  }
+  
+  .chat-content {
+    flex: 2; /* Takes up 2/3rd of the screen */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect for better readability */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Full height */
+  }
+  
+  .sidebar {
+    flex: 1; /* Takes up 1/3rd of the screen */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent sidebar */
+    backdrop-filter: blur(10px); /* Optional: adds blur effect to the sidebar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Full height */
+  }
+  

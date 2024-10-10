@@ -1,0 +1,187 @@
+/* Conversations.css */
+
+/* General reset and styling for the whole container */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Styling for Conversations component */
+.conversations {
+  width: 360px; /* Similar to a mobile screen width */
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 100vh; /* Make the component scrollable */
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px); /* Adds a blur effect behind the container */
+}
+
+/* Each conversation styling */
+.conversation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.conversation:hover {
+  background-color: rgba(240, 240, 240, 0.5); /* Slightly transparent background on hover */
+}
+
+/* Profile picture styling */
+.conversation img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Circular profile image */
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Info area styling */
+.conversation-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Name of the contact */
+.conversation-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Last message preview */
+.conversation-preview {
+  font-size: 14px;
+  color: #666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Time of the message */
+.conversation-time {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Add some spacing and margin */
+.conversation:last-child {
+  border-bottom: none;
+}
+/* Conversations.css */
+
+/* General reset and styling for the whole container */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Styling for Conversations component */
+  .conversations {
+    width: 360px; /* Similar to a mobile screen width */
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 100vh; /* Make the component scrollable */
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px); /* Adds a blur effect behind the container */
+  }
+  
+  /* Each conversation styling */
+  .conversation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .conversation:hover {
+    background-color: rgba(240, 240, 240, 0.5); /* Slightly transparent background on hover */
+  }
+  
+  /* Profile picture styling */
+  .conversation img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Circular profile image */
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  /* Info area styling */
+  .conversation-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  /* Name of the contact */
+  .conversation-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Last message preview */
+  .conversation-preview {
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  /* Time of the message */
+  .conversation-time {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  /* Add some spacing and margin */
+  .conversation:last-child {
+    border-bottom: none;
+  }
+  

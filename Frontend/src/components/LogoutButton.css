@@ -1,0 +1,24 @@
+/* LogoutButton.css */
+
+/* General styling for the button container */
+.logout-button {
+    position: fixed; /* Fixed positioning */
+    bottom: 10px;    /* 10px from the bottom */
+    left: 10px;      /* 10px from the left */
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+    padding: 10px;
+    border-radius: 50%; /* Circular button */
+    cursor: pointer;    /* Pointer cursor for hover */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logout-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  }
+  
+  .logout-button svg {
+    color: rgb(236, 16, 16); /* White color for the icon */
+    font-size: 24px; 
+  }
+  
+  

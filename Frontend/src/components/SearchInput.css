@@ -1,0 +1,65 @@
+/* Wrapper to align form properly */
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 410px;
+  }
+  
+  /* Styling the form */
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Styling for the input field */
+  .search-input {
+    width: 100%;
+    padding-left: 30px;
+    border: none;
+    border-radius: 25px; /* Rounded edges */
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+  }
+  
+  /* Input field placeholder styling */
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Lighter white color for the placeholder */
+    font-size: 14px;
+  }
+  
+  /* Input focus effect */
+  .search-input:focus {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Subtle green shadow */
+  }
+  
+  /* Styling for the search button */
+  .search-btn {
+    position: absolute;
+    right: -10px; /* Align it to the right inside the input */
+    top: 40%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    outline: none;
+  }
+  
+  /* Hover effect on the button */
+  .search-btn:hover {
+    color: #00FF00; /* Green color on hover */
+    outline: none;
+  }
+  
+  /* Accessibility and interaction */
+  
+  
+  
+  
